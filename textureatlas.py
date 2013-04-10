@@ -288,10 +288,9 @@ class TextureAtlas(bpy.types.Operator):
         if result_text is None:
             result_text = bpy.data.texts.load(scene.rr_atlas_data_output)
 
-        # Pack data in blender file
+        # Pack image data in blender file (can't pack text data yet.)
         if scene.rr_atlas_store_in_blender:
             result_image.pack()
-            result_text.pack()
 
         return {'FINISHED'}
 
